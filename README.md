@@ -46,7 +46,7 @@ var helpers = (function () {
 ```
 
 ## Helper Functions
-- [Purpose](#purpose)
+- [Build a query string from object data](#build-a-query-string-from-object-data)
 
 ## Example of how to use
 ```javascript
@@ -123,4 +123,4 @@ var helpers = (function () {
 })();
 ```
 
-## Purpose
+## Build a query string from object data
