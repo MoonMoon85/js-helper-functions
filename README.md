@@ -57,7 +57,7 @@ var helpers = (function () {
 ## Fetch
 ```javascript
 /**
- * Get the value of a cookie
+ * Get json data using fetch
  * @param  {String} url  The url of the request
  * @return {String}      Json data
  */
