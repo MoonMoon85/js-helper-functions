@@ -46,13 +46,31 @@ var helpers = (function () {
 ```
 
 ## Helper Functions
-
+- [Wait for element](#wait-for-element)
 - [Fetch](#fetch)
 - [Get next sibling which matches a selector](#get-next-sibling-which-matches-a-selector)
 - [Get cookie value](#get-cookie-value)
 - [Create a query string from object data](#build-a-query-string-from-object-data)
 - [Remove duplicates from array](#remove-duplicates-from-array)
 - [Format timestamp into a date string](#format-timestamp-into-a-date-string)
+
+## Wait for Element
+```javascript
+/**
+ * Wait for an element to be available in DOM
+ * @param {String} selector  Element to wait for
+ * @param {function} callback  Code to run
+ */
+var waitForEl = function(selector, callback) {
+  if (document.querySelector(selector)) {
+    callback();
+  } else {
+    setTimeout(function() {
+      waitForEl(selector, callback);
+    }, 100);
+  }
+};
+```
 
 ## Fetch
 ```javascript
