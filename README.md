@@ -46,11 +46,30 @@ var helpers = (function () {
 ```
 
 ## Helper Functions
+
+- [Fetch](#fetch)
 - [Get next sibling which matches a selector](#get-next-sibling-which-matches-a-selector)
 - [Get cookie value](#get-cookie-value)
 - [Create a query string from object data](#build-a-query-string-from-object-data)
 - [Remove duplicates from array](#remove-duplicates-from-array)
 - [Format timestamp into a date string](#format-timestamp-into-a-date-string)
+
+## Fetch
+```javascript
+/**
+ * Get the value of a cookie
+ * @param  {String} url  The url of the request
+ * @return {String}      Json data
+ */
+const fetchData = async function(url) {
+  let response = await fetch(url);
+  let data = await response.json()
+  return data;
+}
+
+fetchData('https://beteasy.com.au/apiproxy/Event/RaceForm/46050350')
+  .then(data => console.log(data)); 
+```
 
 ## Get next sibling which matches a selector
 ```javascript
