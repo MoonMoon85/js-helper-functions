@@ -67,8 +67,8 @@ const fetchData = async function(url) {
   return data;
 }
 
-fetchData('https://beteasy.com.au/apiproxy/Event/RaceForm/46050350')
-  .then(data => console.log(data)); 
+fetchData('url')
+  .then(data => console.log(data));
 ```
 
 ## Get next sibling which matches a selector
